@@ -1,0 +1,29 @@
+.card-list--modernization {
+  flex-direction: column;
+}
+
+.card--modernization {
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+}
+
+.card--modernization .card-img {
+  width: 570px;
+  height: 285px;
+}
+
+.card--modernization .card-title {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 15px;
+}
+
+.card--modernization .card-description {
+  margin: 0 0 22px;
+}
+
+.card--modernization .card-info {
+  min-height: 285px;
+  justify-content: space-between;
+}
