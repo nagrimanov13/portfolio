@@ -1,0 +1,23 @@
+services:
+  database:
+    image: postgres:latest
+    container_name: pywallet_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-rooted}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-rooted}
+      POSTGRES_DB: ${POSTGRES_DB:-rooted}
+    volumes:
+      pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: always
+    networks:
+      - pywallet-net
+
+volumes:
+  pgdata:
+    driver: local
+
+networks:
+  pywallet-net:
+    driver: bridge
