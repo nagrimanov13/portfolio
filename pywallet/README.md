@@ -6,10 +6,10 @@ As developer you need to run `docker-compose.yml` file for starting your postgre
 
 ```bash
 # If using docker-compose
-docker-compose up postgres -d
+docker-compose up pywallet_postgres -d
 
 # If using compose plugin for docker
-docker compose up postgres -d
+docker compose up pywallet_postgres -d
 ```
 
 It will start postgres database with default credentials `rooted:rooted:rooted`. You can change default credentials in `docker-compose.yml` file.

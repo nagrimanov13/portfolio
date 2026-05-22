@@ -18,8 +18,17 @@ class WalletResponse(BaseModel):
     def as_res(self: object) -> AnyResponse[object]:
         return AnyResponse[WalletResponse](data=self)
 
-
 type WalletsResponse = List[WalletResponse]
+
+
+class UserResponse(BaseModel):
+    uuid: str = ""
+    wallets: WalletsResponse = []
+    username: str = ""
+    password_hash: str = ""
+
+type UsersResponse = List[UserResponse]
+
 
 
 class HealthResponse(BaseModel):
